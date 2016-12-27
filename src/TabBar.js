@@ -341,6 +341,7 @@ export default class TabBar extends Component<DefaultProps, Props, State> {
                   delayPressIn={0}
                   onPress={() => { // eslint-disable-line react/jsx-no-bind
                     const { onTabPress, jumpToIndex } = this.props;
+                    this._resetScrollOffset(this.props);
                     jumpToIndex(i);
                     if (onTabPress) {
                       onTabPress(routes[i]);
